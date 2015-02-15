@@ -39,6 +39,7 @@
      * Class containing the diff, match and patch methods.
      * @constructor
      */
+    var dmp;
     function diff_match_patch() {
 
       // Defaults.
