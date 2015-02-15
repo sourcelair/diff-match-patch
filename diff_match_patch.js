@@ -1,4 +1,14 @@
-define (function() {
+(function(diff_match_patch) {
+    if (typeof exports == "object" && typeof module == "object") {    // CommonJS
+        module.exports = diff_match_patch();
+    }
+    else if (typeof define == "function" && define.amd) {    // AMD
+        return define([], diff_match_patch);
+    }
+    else {    // Plain browser env
+        this.diff_match_patch = diff_match_patch();
+    }
+})(function() {
     'use strict';
     /**
      * Diff Match and Patch
