@@ -2196,14 +2196,6 @@
     };
 
 
-    // Export these global variables so that they survive Google's JS compiler.
-    // In a browser, 'this' will be 'window'.
-    // Users of node.js should 'require' the uncompressed version since Google's
-    // JS compiler may break the following exports for non-browser environments.
-    window['diff_match_patch'] = diff_match_patch;
-    window['DIFF_DELETE'] = DIFF_DELETE;
-    window['DIFF_INSERT'] = DIFF_INSERT;
-    window['DIFF_EQUAL'] = DIFF_EQUAL;
     dmp = new diff_match_patch();
     dmp.Diff_Timeout=0;
     return dmp;
